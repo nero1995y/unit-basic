@@ -1,4 +1,4 @@
-const Calculator = require('../calculator.js');
+const Calculator = require('../basic/calculator.js');
 
 describe('Calculator', () => {
   let cal;
@@ -27,6 +27,12 @@ describe('Calculator', () => {
     cal.add(2);
 
     expect(cal.value).toBe(3);
+  });
+
+  it('add should throw an error if value greater than 100', () => {
+    expect(() => {
+      cal.add(101);
+    }).toThrow('Value can not be greater than 100');
   });
 
   it('subtract', () => {

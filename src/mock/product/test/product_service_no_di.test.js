@@ -1,7 +1,7 @@
-const ProductService = require('../product/product_service_no_di.js');
-const ProductClient = require('../product/product_client.js');
+const ProductService = require('../product_service_no_di.js');
+const ProductClient = require('../product_client.js');
 
-jest.mock('../product/product_client');
+jest.mock('../product_client');
 
 describe('ProductService', () => {
   const fetchItems = jest.fn(async () => [
